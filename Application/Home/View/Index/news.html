@@ -1,0 +1,112 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(4).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li>&nbsp;{$title['news center']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div class="topNews">
+                <div class="col-md-6">
+                    <div class="companyNews">
+                        <div class="newsTip">
+                           <a href="{:U('news')}?lang={$lang}&status=0"><span>{$title['Company News']}</span></a> 
+                            
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hyNews">
+                        <div class="newsTip">
+                          <a href="{:U('news')}?lang={$lang}&status=1"><span>{$title['Industry developments']}</span></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="newsPage">
+                <foreach name="news" item="vo">
+                <div class="col-md-4">
+                    <div class="newsBox">
+                        <a href="{:U('Newsper')}?lang={$lang}&id={$vo['id']}">
+                            <div class="newsPic">
+                                <img src='{$vo["pic_$lang"]}'>
+                            </div>
+                            <div class="newsText">
+                                <h3>{$vo["title_$lang"]}</h3>
+                                <p>{$vo["intro_$lang"]}</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+              </foreach>
+            </div>
+            <div class="clearfix"></div>
+            <div class="newsBtn" onclick="more()">{$title['Click to load more']}</div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+    <script>
+        var listrow = 0;
+        var lang = "{$lang}";
+        var status ="{$status}"
+        var url = "{:U('Newsper')}?lang="+lang;
+
+        function more(){
+               listrow++; //第一次查询 6+6
+               if(listrow > {$pagelists}){
+                    $("div[class='newsBtn']").css("display","none");
+               }            
+                $.ajax({
+                type:"POST",
+                url:"{:U('News')}",
+                data:{nowpage:listrow,status:status,lang:lang},
+                datatype:"json",
+                success:function(data){
+                   data=JSON.parse(data);
+                   var string='';
+                   console.log(data);
+                for(var i=0;i<data.length;i++){
+                    string+=' <div class="col-md-4">';
+                    string+='<div class="newsBox">';
+                    string+=' <a href="'+url+'&id='+data[i]["id"]+'">';
+                    string+='<div class="newsPic">';
+                    string+="<img src='"+data[i]["pic_"+lang]+"'>'";
+                    string+=" </div>";
+                    string+=" <div class='newsText'>";
+                    string+="<h3>"+data[i]["title_"+lang]+"</h3>";
+                    string+="<p>"+data[i]["intro_"+lang]+"<p>";
+                    string+="</div></a></div></div>";
+
+                }
+                $(".newsPage").append(string);
+                }
+
+            });
+
+        }
+
+    </script>
+</body>
+</html>

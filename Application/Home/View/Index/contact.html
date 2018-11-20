@@ -1,0 +1,53 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(6).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li>&nbsp;{$title['contact us']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div class="contactBox">
+                <div class="contactTitle">
+                    <h3>{$title['contact']}</h3>
+                    <div class="contactDashed"></div>
+                </div>
+                <div class="contactText">
+                    <p>{$data["name1_$lang"]}：{$data["telephone1"]}</p>
+                    <p>{$data["name2_$lang"]}：{$data["telephone2"]}</p>
+                    <p>{$title['telephone']}：{$data["phone"]}</p>
+                    <p>{$title['mailbox']}：{$data["emailbox_$lang"]}</p>
+                    <p>{$title['address']}：{$data["adress_$lang"]}</p>
+                    <div class="contactWx">
+                        <img src='{$data["ewm"]}'>
+                        <p>{$title['Gemeyu home']}</p>
+                    </div>
+                </div>
+                <div class="mapBox">
+                    <iframe src="map.html" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+      <include file="Common/Gemei/footer"/>
+
+ <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+</body>
+</html>

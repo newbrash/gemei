@@ -1,0 +1,139 @@
+<script>
+    $(function(){
+        var controller_name = "{:CONTROLLER_NAME}";
+        var nav     = $('.nav-second-level a');
+        nav.each(function(){
+            var url = $(this).attr('href');
+            console.log(controller_name);
+            console.log(url);
+            if(url.indexOf('/'+controller_name) > 0){
+                $(this).parent().addClass('navsecondactive');
+                $(this).parent().parent().addclass('in');
+                return false;
+            }
+        });
+    });
+</script>
+
+<nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 100">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header" style="padding: 25px 20px;">
+                <div class="dropdown profile-element">
+                    <span>
+                        <img alt="image" class="img-circle" height="60px" src="__PUBLIC__/Gemei/images/homepro2.png" />
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.admin_username}</strong>
+                        </span>  <span class="text-muted text-xs block"><eq name="Think.session.admin_id" value="1">超级管理员<else/>管理员</eq> <b class="caret"></b></span> </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="{:U('Index/changePassword')}">修改密码</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{:U('Public/logout')}">安全退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    GM
+                </div>
+            </li>
+            <li class="active">
+                <a href="#"><i class="fa fa-edit" style="width: 18px"></i> <span class="nav-label">后台菜单</span></a>
+                <ul class="nav nav-second-level">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#collapseOne">
+                                    <li>产品分类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>>></span></li>
+                                </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <a href="{:U('HighLevel/lists')}">大分类</a>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="{:U('MiddleLevel/lists')}">小分类</a>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="{:U('ElementaryLevel/lists')}">产品</a>
+                                </div>
+                            </div>
+                        </div> <!-- 产品中心 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#collapseTwo">
+                                    新闻中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>>></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <a href="{:U('News/index',['status'=>0])}">公司新闻</a>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="{:U('News/index',['status'=>1])}">行业动态</a>
+                                </div> 
+                            </div>
+                        </div> <!-- 新闻中心 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#collapseThree">
+                                       图片管理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>>> </span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <a href="{:U('Lunbo/index')}">首页轮播图</a>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="{:U('Headpic/index')}">其它页面头部</a>
+                                </div>
+                            </div>
+                        </div>  <!-- 图片管理 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                     <a href="{:U('Aboutus/index')}">关于我们</a>
+                                </h4>
+                            </div>
+                        </div> <!-- 关于我们 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="{:U('Contact/index')}">联系我们</a>
+                                </h4>
+                            </div>
+                        </div> <!-- 联系我们 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="{:U('Recruit/index')}">招贤纳士</a>    
+                                </h4>
+                            </div>
+                        </div>  <!-- 招贤纳士 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                     <a href="{:U('Technology/index')}">技术力量</a> 
+                                </h4>
+                            </div>
+                        </div> <!-- 技术力量 -->
+                    </div>  <!-- 折叠式导航栏 -->
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+

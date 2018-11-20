@@ -1,0 +1,56 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(5).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li>&nbsp;{$title['recruit']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div class="recIntro">
+                <h3>{$title['Salaries and benefits']}</h3>
+                    {$recruit[0]["salaris_$lang"]}
+            </div>
+
+            <foreach name="recruit" item="vo" key="key">
+                <if condition="$vo['id'] eq 1">
+                <else/>
+                <div class="recList">
+                    <h3>{$vo["position_$lang"]}</h3>
+                    <p><span>{$title['Number of recruitments']}：</span>{$vo["number_$lang"]}</p>
+                    <p><span>{$title['Description of duties']}：</span></p>
+                    {$vo["description_$lang"]}
+                    <p><span>{$title['Post requirements']}：</span></p>
+                    {$vo["requirement_$lang"]}
+                </div>
+                </if>                
+            </foreach>
+            <!-- 输出岗位 -->
+            <div class="recContact">
+                <h3>{$title['How to apply']}</h3>
+                {$recruit[0]["apply_$lang"]}
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+</body>
+</html>

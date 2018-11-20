@@ -1,0 +1,193 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <if condition="$data['id']">
+                        <h5>编辑产品</h5>
+                        <else/>
+                        <h5>添加产品</h5>
+                    </if>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post"  enctype="multipart/form-data" action="{:U('edit')}">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">所属高级类别：</label>
+                            <div class="col-sm-6">
+                                <select id="high_id">
+                                    <option value="0">请选择高级类别</option>
+                                    <foreach name="high_level" item="vo">
+                                        <option value="{$vo.id}"  value="{$vo.id}" <if condition="($vo.id eq $high_id)">selected</if> >{$vo.high_name_chinese}</option>
+                                    </foreach>
+                                </select>
+                                <select name="middle_id" id="middle_id">
+                                    <option value="0">请选择中级类别</option>
+                                    <foreach name="middle_level" item="vo">
+                                        <option value="{$vo.id}" <if condition="($vo.id eq $data['middle_id'])">selected</if> >{$vo.middle_name_chinese}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">型号：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="xinhao_chinese" class="form-control" name="xinhao_chinese" value="{$data.xinhao_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="xinhao_english" class="form-control" name="xinhao_english" value="{$data.xinhao_english}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">图片：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="picurl"  name="picurl_chinese" value="{$data.picurl}">
+                                <img src="{$data.picurl_chinese}" alt="" width="270px" height="156px">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="picurl"  name="picurl_english" value="{$data.picurl}">
+                                <img src="{$data.picurl_english}" alt="" width="270px" height="156px">
+                            </div>                            
+                        </div>  <!-- 图片 -->
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">产品详情：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_chinese" id="myEditor_chinese" style="width:100%;height:240px;">{$data.intro_chinese}</script>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_english" id="myEditor_english" style="width:100%;height:240px;">{$data.intro_english}</script>
+                            </div>
+                        </div>                                                    
+                    <div class="form-group">
+                            <label class="col-sm-1 control-label">尺寸：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="chicun_chinese" class="form-control" name="chicun_chinese" value="{$data.chicun_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="chicun_english" class="form-control" name="chicun_english" value="{$data.chicun_english}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">重量：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="zhonglian_chinese" class="form-control" name="zhonglian_chinese" value="{$data.zhonglian_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="zhonglian_english" class="form-control" name="zhonglian_english" value="{$data.zhonglian_english}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">建议使用率：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="jianyi_chinese" class="form-control" name="jianyi_chinese" value="{$data.jianyi_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="jianyi_english" class="form-control" name="jianyi_english" value="{$data.jianyi_english}">
+                            </div>
+                        </div>                                                                                                     
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <input type="hidden" name="uploads" value="0">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+        $('#high_id').change(function(){
+            var high_id = $('#high_id').val();
+            $.ajax({
+                type:"POST",
+                url:"{:U('get_middle_info')}",
+                data:{'high_id':high_id},
+                datatype:"text",
+                success:function(data){
+                    if(data != ''){
+                        $('#middle_id').show();
+                        $('#middle_id').empty();
+                        $('#middle_id').append(data);
+                    }else{
+                        $('#middle_id').empty();
+                        $('#middle_id').hide();
+                    }
+                }
+            });
+        });
+    });
+    var um = UM.getEditor('myEditor_chinese');
+    var um = UM.getEditor('myEditor_english');
+    $('form').submit(function(){
+        var high_id = $("#high_id").val();
+        var middle_id=$("#middle_id").val();
+        if(high_id==0){
+            layer.msg("请选择高级类别",{time:1000});
+            return false;
+        }
+        if(!middle_id){
+            layer.msg("请选择小类别",{time:1000});
+            return false;
+        }
+        var model = $("input[name='xinhao_chinese']").val()&&$("input[name='xinhao_english']").val();
+        if(!model){
+            layer.msg("请确输入型号中文与英文",{time:1000});
+            return false;
+        }
+        var weight = $("input[name='zhonglian_chinese']").val()&&$("input[name='zhonglian_english']").val();
+        if(!weight){
+            alert("请确保输入重量中文与英文");
+            return false;
+        }
+        var size = $("input[name='chicun_chinese']").val()&&$("input[name='chicun_english']").val();
+        if(!size){
+            alert("请确保输入尺寸中文与英文");
+            return false;
+        }
+        var details = $("input[name='jianyi_chinese']").val()&&$("input[name='jianyi_english']").val();
+        if(!details){
+            alert("请确保输入建议中文与英文");
+            return false;
+        }
+        var contente = UM.getEditor('myEditor_chinese').getContent();
+        var contentc = UM.getEditor('myEditor_english').getContent();
+
+        var intro = contente&&contentc;
+        if(!intro){
+            alert("请确保输入产品详情中文与英文");
+            return false;
+        } 
+        if($("input[name='picurl_chinese']").val()||$("input[name='picurl_english']").val()){
+            $("input[name='uploads']").val(1);
+        }  
+
+    });
+</script>
+</block>
+

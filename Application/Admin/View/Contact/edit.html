@@ -1,0 +1,196 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>联系我们</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post"  enctype="multipart/form-data" action="{:U('edit')}">
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">联系人1：</label> 
+                            <label class="col-sm-2 control-label">名字中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="name_chinese" class="form-control" name="name1_chinese" value="{$data.name1_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">名字英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="name_english" class="form-control" name="name1_english" value="{$data.name1_english}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">手机：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="telephone" class="form-control" name="telephone1" value="{$data.telephone1}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">联系人2：</label> 
+                            <label class="col-sm-2 control-label">名字中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="name_chinese" class="form-control" name="name2_chinese" value="{$data.name2_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">名字英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="name_english" class="form-control" name="name2_english" value="{$data.name2_english}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">手机：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="telephone2" class="form-control" name="telephone2" value="{$data.telephone2}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">企业电话：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="phone" class="form-control" name="phone" value="{$data.phone}">
+                            </div>
+                        </div>
+
+<!--                         <div class="form-group">
+                            <label class="col-sm-1 control-label">传真：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="fax_chinese" class="form-control" name="fax_chinese" value="{$data.fax_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="fax_english" class="form-control" name="fax_english" value="{$data.fax_english}">
+                            </div>
+                        </div> -->
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">企业邮箱：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="emailbox_chinese" class="form-control" name="emailbox_chinese" value="{$data.emailbox_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="emailbox_english" class="form-control" name="emailbox_english" value="{$data.emailbox_english}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">公司地址：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="adress_chinese" class="form-control" name="adress_chinese" value="{$data.adress_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="adress_english" class="form-control" name="adress_english" value="{$data.adress_english}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">公司二维码：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="ewm"  name="ewm" value="{$data.ewm}">
+                                <img src="{$data.ewm}" alt="">
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <input type="hidden" name="uploads" value="0">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+
+<script>
+    $("form").submit(function(){
+        var name1_chinese = $("input[name='name1_chinese']").val();
+        var name1_english = $("input[name='name1_english']").val();
+        var name2_chinese = $("input[name='name2_chinese']").val();
+        var name2_english = $("input[name='name2_english']").val();        
+        var telephone1    = $("input[name='telephone1']").val();
+        var telephone2    = $("input[name='telephone2']").val();
+        var phone        = $("input[name='phone']").val();
+        var emailbox_chinese = $("input[name='emailbox_chinese']").val();
+        var emailbox_english = $("input[name='emailbox_english']").val();
+        var fax_chinese = $("input[name='fax_chinese']").val();
+        var fax_english = $("input[name='fax_english']").val();
+        var adress_chinese = $("input[name='adress_chinese']").val();
+        var adress_english = $("input[name='adress_english']").val();
+   
+        if(!name_chinese1){
+            alert('请填写联系人1中文名字');
+            return false;
+        }
+        if(!name_english1){
+            alert('请补充联系人1英文名字');
+            return false;
+        }
+        if(!telephone1){
+            alert('请填写联系人1联系方式');
+            return false;
+        }
+        if(!name_chinese2){
+            alert('请填写联系人2中文名字');
+            return false;
+        }
+        if(!name_english2){
+            alert('请补充联系人2英文名字');
+            return false;
+        }
+        if(!telephone2){
+            alert('请填写联系人2联系方式');
+            return false;
+        }        
+        if(!phone){
+            alert('请填写手机号码');
+            return false;
+        }
+        if(!emailbox_chinese){
+            alert('请填写中文邮箱');
+            return false;
+        }
+        if(!emailbox_english){
+            alert('请补充邮箱英文');
+            return false;
+        }
+        if(!fax_chinese){
+            alert('请填写中文传真');
+            return false;
+        }
+        if(!fax_english){
+            alert('请补充英文传真');
+            return false;
+        }
+        if(!adress_chinese){
+            alert('请填写中文地址');
+            return false;
+        }
+        if(!adress_english){
+            alert('请补充英文地址');
+            return false;
+        }
+                                
+        if($("input[name='ewm']").val()){
+         $("input[name='uploads']").attr("value",1);
+        }
+
+    });  
+</script>
+</block>
+

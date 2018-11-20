@@ -1,0 +1,200 @@
+<include file="Common/Gemei/header"/>
+    <!-- nav -->
+    <!-- homeCarousel -->
+    <div class="swiper-container" id="homeCarousel">
+        <div class="swiper-wrapper">
+            <foreach name="lunbo" item="vo">
+              <div class="swiper-slide"><img src='{$vo["picurl_$lang"]}'></div>
+            </foreach>
+        </div>
+      </div>
+    <!-- homeCarousel -->
+    <if condition="$lang eq 'chinese'">
+        <div class="module">
+            <div class="container">
+                <div class="homeProducts">
+                    <div class="homeProTitle">
+                        <h2>产品分类</h2>
+                    </div>
+                        <div class="homeProNav">
+                            <ul>
+                                <foreach name="products['chinese']" item="voh" key="kh" >               
+                                <li <if condition="$kh eq $key_high_chinese">class="homeProActive"</if>>
+                                    <p><img src="__PUBLIC__/Gemei/images/pointwt.png" id="activePic">{$kh}</p>
+                                </li>
+                                </foreach>
+                            </ul>
+                        </div>
+                        <div class="homeProRight">
+                            <foreach name="products['chinese']"  item='voh' key='kh'>                  
+                            <div class="homeProContent" <if condition="$kh eq $key_high_chinese"><else/>style="display: none"</if>>
+                                <div class="homeProContentNav">
+                                    <ul>
+                                        <foreach name="voh" item="vom" key="km">                  
+                                            <li>
+                                                <p <if condition="$km eq $key_middle_chinese[$kh]">class="homeProChecked"</if>>{$km}</p>
+                                            </li>
+                                        </foreach>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <foreach name="voh" item="vom" key="km">                  
+                                        <div class="homProBoxPage" <if condition="$km eq $key_middle_chinese[$kh]"><else/>style="display: none"</if>>
+                                            <php> $i=0; </php>
+                                            <foreach name="vom" item="vop" key='k'>
+                                                <if condition="$i++ lt 8">
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="homProBox">
+                                                        <a href="{:U('productPer')}?id={$vop['id']}&lang={$lang}"><img src='{$vop["picurl_$lang"]}'></a>
+                                                    </div>
+                                                </div>
+                                                </if>
+                                            </foreach>
+                                        </div>
+                                    </foreach>
+                                </div>
+                            </div>
+                            </foreach>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <else/>
+        <div class="module">
+            <div class="container">
+                <div class="homeProducts">
+                    <div class="homeProTitle">
+                        <h2>Product classification</h2>
+                    </div>
+                        <div class="homeProNav">
+                            <ul>
+                                <foreach name="products['english']" item="voh" key="kh" >               
+                                <li <if condition="$kh eq $key_high_english">class="homeProActive"</if>>
+                                    <p><img src="__PUBLIC__/Gemei/images/pointwt.png" id="activePic">{$kh}</p>
+                                </li>
+                                </foreach>
+                            </ul>
+                        </div>
+                        <div class="homeProRight">
+                            <foreach name="products['english']"  item='voh' key='kh'>                  
+                            <div class="homeProContent" <if condition="$kh eq $key_high_english"><else/>style="display: none"</if>>
+                                <div class="homeProContentNav">
+                                    <ul>
+                                        <foreach name="voh" item="vom" key="km">                  
+                                            <li>
+                                                <p <if condition="$km eq $key_middle_english[$kh]">class="homeProChecked"</if>>{$km}</p>
+                                            </li>
+                                        </foreach>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <foreach name="voh" item="vom" key="km">                  
+                                        <div class="homProBoxPage" <if condition="$km eq $key_middle_english[$kh]"><else/>style="display: none"</if>>
+                                            <php> $i=0; </php>
+                                            <foreach name="vom" item="vop" key='k'>
+                                                <if condition="$i++ lt 8">
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="homProBox">
+                                                        <a href="{:U('productPer')}?id={$vop['id']}&lang={$lang}"><img src='{$vop["picurl_$lang"]}'></a>
+                                                    </div>
+                                                </div>
+                                                </if>
+                                            </foreach>
+                                        </div>
+                                    </foreach>
+                                </div>
+                            </div>
+                            </foreach>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        </if>
+    <!-- homeProducts -->
+    <!-- homeProducts -->
+    <!-- about&news -->
+    <div class="module">
+        <div class="container">
+            <div class="col-md-6 col-xs-12">
+                <div class="homeAbout">
+                    <div class="homeAboutTitle">
+                        <h2>{$title['about us']}</h2>
+                    </div>
+                    <div class="homeAboutBg">
+                        <div class="homeAboutBorder">
+                        </div>
+                            <div class="homeAboutContent">
+                                <p>
+                                    {$aboutus["intro_$lang"]}
+                                </p>
+                                <a href="{:U('about')}?lang={$lang}">{$title['More']} >>></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="homeNews">
+                    <div class="homeNewsTitle">
+                        <h2>{$title['news center']}</h2>
+                    </div>
+                    <div class="homeNewsContent">
+                        <foreach name='news' item='vo'>
+                        <div class="homeNewsList">
+                            <a href="{:U('newsPer')}?id={$vo.id}">
+                                <p>{$vo["intro_$lang"]}</p>
+                            </a>
+                        </div>
+                        </foreach>
+<!--                         <div class="homeNewsList">
+                                <a href="newsPer.html">
+                                    <p>石墨烯在第二届国际碳材料大会暨产业展览会上荣获“碳优
+                                            奖—新锐成长企业奖”
+                                    </p>
+                                </a>
+                        </div>
+                        <div class="homeNewsList">
+                                <a href="newsPer.html">
+                                    <p>石墨烯在第二届国际碳材料大会暨产业展览会上荣获“碳优
+                                            奖—新锐成长企业奖”
+                                    </p>
+                                </a>
+                        </div>
+                        <div class="homeNewsList">
+                                <a href="newsPer.html">
+                                    <p>石墨烯在第二届国际碳材料大会暨产业展览会上荣获“碳优
+                                            奖—新锐成长企业奖”
+                                    </p>
+                                </a>
+                        </div>
+                        <div class="homeNewsList">
+                            <a href="newsPer.html">
+                                <p>石墨烯在第二届国际碳材料大会暨产业展览会上荣获“碳优
+                                        奖—新锐成长企业奖”
+                                </p>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about&news -->
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+    <script>
+        var homeCarousel = new Swiper('#homeCarousel', {
+            autoplay: true,
+            autoplay: {
+                disableOnInteraction: false,
+            },
+            loop: true
+        })
+    </script>
+</body>
+</html>

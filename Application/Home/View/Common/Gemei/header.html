@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>格美优家科技</title>
+    <link rel="shortcut icon" href="images/gmico.ico" />
+    <link rel="stylesheet" href="__PUBLIC__/Gemei/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Gemei/css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Gemei/css/over.css">
+    <!--     <link rel="stylesheet" href="__PUBLIC__/Gemei/css/style.css">
+    -->  
+    <if condition ="$lang eq chinese">
+        <link rel="stylesheet" href="__PUBLIC__/Gemei/css/style.css">
+        <else/>
+        <link rel="stylesheet" href="__PUBLIC__/Gemei/css/style.css">
+        <link rel="stylesheet" href="__PUBLIC__/Gemei/css/style-en.css">
+        
+    </if>
+    <link rel="stylesheet" href="__PUBLIC__/Gemei/css/stylePhone.css" media="screen and (max-width: 600px)">
+    <script type="text/javascript" src="__PUBLIC__/Gemei/js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+    .footerContact p{
+        font-size:0.19rem !important;
+    }
+    .footerContact{
+        padding-left:0 !important;
+    }
+    .footerContact p scan{
+        padding-left:0.65rem;
+    }
+    .productRight p span{
+         font-size:19px !important;
+         font-family:宋体 !important;
+     }
+     .aboutText{
+        padding:0.2rem 0.6rem;
+    }
+</style>
+</head>
+<body>
+    <!-- nav -->
+    <div class="navTop">
+        <div class="container">
+            <div class="navLang">
+                <img src="{$logo}">
+                <if condition="$productPer['id']">
+                    <div class="langChange">
+                        <a href="?lang=chinese&id={$productPer['id']}">中文</a>
+                        <a href="?lang=english&id={$productPer['id']}">English</a>
+                    </div>
+                    <elseif condition="$news['id']"/>
+                    <div class="langChange">
+                        <a href="?lang=chinese&id={$news['id']}" >中文</a>
+                        <a href="?lang=english&id={$news['id']}">English</a>
+                    </div>                    
+                    <else/>
+                    <div class="langChange">
+                        <a href="?lang=chinese" >中文</a>
+                        <a href="?lang=english">English</a>
+                    </div>
+                </if>
+            </div>
+        </div>
+        <img src="__PUBLIC__/Gemei/images/menu.png" class="navMenu">
+        <div class="navPhone">
+            <ul>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a></li>
+                <li><a href="{:U('products')}?lang={$lang}">{$title['product center']}</a></li>
+                <li><a href="{:U('about')}?lang={$lang}">{$title['about us']}</a></li>
+                <li><a href="{:U('technology')}?lang={$lang}">{$title['technology']}</a></li>
+                <li><a href="{:U('news')}?lang={$lang}">{$title['news center']}</a></li>
+                <li><a href="{:U('recruit')}?lang={$lang}">{$title['recruit']}</a></li>
+                <li><a href="{:U('contact')}?lang={$lang}">{$title['contact us']}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navBtn">
+        <div class="container">
+            <div class="navContent">
+                <ul>
+                    <li class="navActive"><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a></li>
+                    <li><a href="{:U('products')}?lang={$lang}">{$title['product center']}</a></li>
+                    <li><a href="{:U('about')}?lang={$lang}">{$title['about us']}</a></li>
+                    <li><a href="{:U('technology')}?lang={$lang}">{$title['technology']}</a></li>
+                    <li><a href="{:U('news')}?lang={$lang}">{$title['news center']}</a></li>
+                    <li><a href="{:U('recruit')}?lang={$lang}">{$title['recruit']}</a></li>
+                    <li><a href="{:U('contact')}?lang={$lang}">{$title['contact us']}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

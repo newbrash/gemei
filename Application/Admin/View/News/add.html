@@ -1,0 +1,137 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <if condition="$status eq 0">
+                        <h5>公司新闻</h5>
+                        <else/>
+                        <h5>行业动态</h5>
+                    </if>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post"  enctype="multipart/form-data" action="{:U('add')}">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">所属高级类别：</label>
+                            <div class="col-sm-6">
+                                <if condition="$status eq 0">
+                                    <select id="high_id" name="status">
+                                        <option value="0"   <if condition="$status eq 0">selected</if> >公司新闻</option>
+                                    </select>
+                                    <else/>
+                                    <select id="high_id" name="status">
+                                        <option value="1"   <if condition="$status eq 1">selected</if> >行业动态</option>
+                                    </select>
+                                </if>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">标题：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="title_chinese" class="form-control" name="title_chinese" value="{$data.title_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="title_english" class="form-control" name="title_english" value="{$data.title_english}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">简介：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_chinese"  id="intro_chinese" style="width:100%;height:240px;">{$data.intro_chinese}</script>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_english"  id="intro_english" style="width:100%;height:240px;">{$data.intro_english}</script>
+                            </div>
+                        </div>                             
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">图片：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="pic"  name="pic_chinese" value="{$data.pic}">
+                                <img src="{$data.pic_chinese}" alt="" width="270px" height="156px" border="none">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="pic"  name="pic_english" value="{$data.pic}">
+                                <img src="{$data.pic_english}" alt=""  name="pic_english" value="{$data.pic}" width="270px" height="156px" border="none">
+                            </div>                            
+                        </div>  <!-- 图片 -->
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">内容：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="content_chinese"  id="content_chinese" style="width:100%;height:240px;">{$data.content_chinese}</script>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">：</label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="content_english"  id="content_english" style="width:100%;height:240px;">{$data.content_english}</script>
+                            </div>
+                        </div>                                                    
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden"  name="uploads" value="0"/> 
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+
+  <script>
+    $('form').submit(function(){
+        var title_chinese = $("input[name='title_chinese']").val();
+        var title_english = $("input[name='title_english']").val();
+       
+        if($("input[name='pic_chinese']").val()||$("input[name='pic_english']").val()){
+            $("input[name='uploads']").attr("value",1);
+        }
+        var title_chinese = $("input[name='title_chinese']").val();
+        var title_english = $("input[name='title_english']").val();
+        if(!(title_chinese&&title_english)) {
+            alert("标题中英文一式两份");
+            return false;
+        }        
+        var contentc = UM.getEditor('content_chinese').getContent();
+        var contente = UM.getEditor('content_english').getContent();
+        if(!(contentc&&contente)){
+            alert("请输入文章中英文一式两份！");
+            return false;
+        }
+        var contentc = UM.getEditor('intro_chinese').getContent();
+        var contente = UM.getEditor('intro_english').getContent();
+        if(!(contentc&&contente)){
+            alert("请输入简介中英文一式两份！");
+            return false;
+        }            
+    });   
+    var um = UM.getEditor('intro_chinese');
+    var um = UM.getEditor('intro_english');
+    var um = UM.getEditor('content_chinese');
+    var um = UM.getEditor('content_english');
+
+</script>
+</block>
+

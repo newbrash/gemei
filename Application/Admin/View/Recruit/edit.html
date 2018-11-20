@@ -1,0 +1,209 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>招贤纳士</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post" action="{:U('edit')}">
+                    <!-- 根据传过来的数据id判断是否是编辑岗位，
+                        1固定薪资与福利 2岗位 
+                    -->
+                    <if condition="$data['id'] eq 1">                                    
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">薪资与福利：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="salaris_chinese" id="salaris_chinese" style="width:100%;height:240px;">{$data.salaris_chinese}</script>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="salaris_english" id="salaris_english" style="width:100%;height:240px;">{$data.salaris_english}</script>
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">应聘方式：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="apply_chinese" id="apply_chinese" style="width:100%;height:240px;">{$data.apply_chinese}</script>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="apply_english" id="apply_english" style="width:100%;height:240px;">{$data.apply_english}</script>
+                            </div>
+                        </div>
+                    <else/> 
+                       <div class="form-group">
+                            <label class="col-sm-1 control-label">招聘岗位：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <input  type="text" id="culture_chinese" class="form-control" name="position_chinese" value="{$data.position_chinese}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <input  type="text" id="position_english" class="form-control" name="position_english" value="{$data.position_english}">
+                            </div>
+                        </div>                            
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">招聘人数：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <input  type="text" id="number_chinese" class="form-control" name="number_chinese" value="{$data.number_chinese}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <input  type="text" id="number_english" class="form-control" name="number_english" value="{$data.number_english}">
+                            </div>
+                        </div>                            
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">职位描述：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="description_chinese" id="description_chinese" style="width:100%;height:240px;">{$data.description_chinese}</script>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="description_english" id="description_english" style="width:100%;height:240px;">{$data.description_english}</script>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">任职要求：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="requirement_chinese" id="requirement_chinese" style="width:100%;height:240px;">{$data.requirement_chinese}</script>
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="requirement_english" id="requirement_english" style="width:100%;height:240px;">{$data.requirement_english}</script>
+                            </div>
+                        </div> 
+                    </if>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+ <script> 
+
+    $(document).on('click','#editor-form',function(e){
+        console.log(e);
+        $("#editor-file").trigger("click");
+        
+    });
+    $("form").submit(function(){
+        var contentdec = UM.getEditor('description_chinese').getContent();
+        if(!contentdec){
+            alert("请输入岗位描述中文！");
+            return false;
+        }
+        var contentdee = UM.getEditor('description_english').getContent();
+        if(!contentdee){
+            alert("请输入岗位描述英文！");
+            return false;
+        } 
+
+        var contentrec = UM.getEditor('requirement_chinese').getContent();
+        if(!contentrec){
+            alert("请输入任职要求中文！");
+            return false;
+        }
+        var contentree = UM.getEditor('requirement_english').getContent();
+        if(!contentree){
+            alert("请输入任职要求英文！");
+            return false;
+        }  
+        var contentsac = UM.getEditor('salaris_chinese').getContent();
+        if(!contentsac){
+            alert("请输入薪资福利中文！");
+            return false;
+        }
+        var contentsae = UM.getEditor('salaris_english').getContent();
+        if(!contentsae){
+            alert("请输入薪资福利英文！");
+            return false;
+        }  
+        var contentapc = UM.getEditor('apply_chinese').getContent();
+        if(!contentapc){
+            alert("请输入联系我们中文！");
+            return false;
+        }
+        var contentape = UM.getEditor('apply_english').getContent();
+        if(!contentape){
+            alert("请输入联系我们英文！");
+            return false;
+        }  
+                                        
+        var position_english =$("input[name='position_english']").val();//岗位
+        var position_chinese =$("input[name='position_chinese']").val();
+        var number_english =$("input[name='number_english']").val();
+        var number_chinese =$("input[name='number_chinese']").val();
+        var description_english =$("input[name='description_english']").val();
+        var description_chinese =$("input[name='description_chinese']").val();
+        var requirement_english =$("input[name='requirement_english']").val();
+        var requirement_chinese =$("input[name='requirement_chinese']").val();
+        var salaris_english =$("input[name='salaris_english']").val();
+        var salaris_chinese =$("input[name='salaris_chinese']").val();
+        var apply_english =$("input[name='apply_english']").val();
+        var apply_chinese =$("input[name='apply_chinese']").val();        
+        if(!(position_chinese)){
+            alert("请填写招聘职位中文");
+            return false;
+        }
+        if(!(position_english)){
+            alert("请填写招聘职位英文");
+            return false;
+        }
+        if(!(number_chinese)){
+            alert("请填写招聘人数中文");
+            return false;
+        }
+        if(!(number_english)){
+            alert("请填写招聘人数英文");
+            return false;
+        }                                                             
+
+    });
+    var um = UM.getEditor('salaris_chinese');
+    var um = UM.getEditor('salaris_english');
+    var um = UM.getEditor('description_chinese');
+    var um = UM.getEditor('description_english');
+    var um = UM.getEditor('requirement_chinese');
+    var um = UM.getEditor('requirement_english');
+    var um = UM.getEditor('apply_chinese');
+    var um = UM.getEditor('apply_english');
+          
+</script>
+</block>
+

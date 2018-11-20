@@ -1,0 +1,36 @@
+    <!-- footer -->
+    <div class="footer">
+        <div class="footerNav">
+            <div class="container">
+                <div class="col-md-4 col-xs-12 col-sm-4">
+                    <div class="footerNavBox">
+                        <p><a href="{:U('products')}?lang={$lang}">{$title['product center']}</a><a href="{:U('news')}?lang={$lang}">{$title['news center']}</a></p>
+                        <p><a href="{:U('about')}?lang={$lang}">{$title['about us']}</a><a href="{:U('recruit')}?lang={$lang}">{$title['recruit']}</a></p>
+                        <p><a href="{:U('technology')}?lang={$lang}">{$title['technology']}</a><a href="{:U('contact')}?lang={$lang}">{$title['contact us']}</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-5 col-xs-12 col-sm-5">
+                    <div class="footerContact">
+                        <p>{$title['Contacts']}:<scan>{$data["name1_$lang"]}</scan><scan>{$data["telephone1"]}</scan></p>
+                        <p>{$title['Contacts']}:<scan>{$data["name2_$lang"]}</scan><scan>{$data["telephone2"]}</scan></p>
+                        <p>{$title['mailbox']}&nbsp;&nbsp;&nbsp;:<scan>{$data["emailbox_$lang"]}</scan></p>
+                        <p>{$title['address']}:{$data["adress_$lang"]}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-3 col-xs-12 col-sm-3">
+                    <div class="wechat">
+                        <img src="{$data[ewm]}">
+                        <p>{$title['Gemeyu home']}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footerCopyright">
+            <p>{$title['copyright owner']}：{$title['gemei youjia graphene technology co LTD']}</p>
+            <p>{$title['internet Conternt Provider']}：{$title['ICP preparation 16035356-1']}</p>
+        </div>
+    </div>
+    <!-- footer -->

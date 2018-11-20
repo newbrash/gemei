@@ -1,0 +1,84 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-14">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>招贤纳士</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <!--表格开始    -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>薪资福利</th>
+                                        <th>联系方式</th>
+                                        <th style="width:100px">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{$datalists[0]['id']}</td>
+                                        <td>{$datalists[0]['salaris_chinese']}</td>
+                                        <td>{$datalists[0]['apply_chinese']}</td>
+                                        <td>
+                                           <a href="{:U('edit',array('id'=>$datalists[0]['id']))}">编辑</a>
+                                       </td>                                        
+                                   </tr>
+                               </table>
+                           </div>
+                           <!-- 招聘岗位  -->
+                           <div class="row">
+                            <div class="col-sm-4">
+                                <div class="input-button">
+                                    <a href="{:U('Recruit/edit')}"> <!-- 没有id为增加 -->
+                                        <button class="btn btn-primary add" type="button"><i class="fa fa-plus"></i>&nbsp;新增</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--表格开始    -->
+                        <form action="__SELF__" method="post" name="updateSort" id="updateSort" >
+                            <input type="hidden" name="page_num" value="{$_GET['p']}"/>
+                            <!--表格开始    -->
+                            <div class="table-responsive">
+                                <table class="table  table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>招聘岗位</th>
+                                            <th>招聘人数</th>
+                                            <th style="width: 200px">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <foreach name="datalists" item="vo">
+                                            <if condition="$vo['id'] eq 1"> <!--  id不等于1 -->
+                                            <else/>                                            
+                                                <tr>
+                                                    <td> {$vo['id']}</td>
+                                                    <td> {$vo.position_chinese}</td>
+                                                    <td> {$vo.number_chinese}</td>
+                                                    <td>
+                                                        <a href="{:U('edit',array('id'=>$vo['id']))}">编辑</a>
+                                                        <a href="{:U('delete',array('id'=>$vo['id']))}">删除</a>
+                                                    </td>
+                                                </tr>
+                                           </if>
+                                        </foreach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--尾部-->
+    <include file="Common/admin:footer"/>
+</div>
+</block>
+

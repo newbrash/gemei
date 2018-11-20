@@ -1,0 +1,47 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-14">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>技术力量</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <!--表格开始    -->
+                                <div class="table-responsive">
+                                    <table class="table  table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>标题一</th>
+                                            <th>标题二</th>
+                                            <th>标题三</th>
+                                            <th>标题四</th>                                            
+                                            <th style="width: 100px">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> {$data['id']}</td>
+                                            <td> {$data.title1_chinese}</td>
+                                            <td> {$data.title2_chinese}</td>
+                                            <td> {$data.title3_chinese}</td>
+                                            <td> {$data.title4_chinese}</td>                                            <td>
+                                                <a href="{:U('edit',array('id'=>$data['id']))}">编辑</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--尾部-->
+        <include file="Common/admin:footer"/>
+    </div>
+</block>
+

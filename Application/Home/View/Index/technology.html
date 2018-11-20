@@ -1,0 +1,60 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(3).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li>&nbsp;{$title['technology']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div id="technology">
+                {$technology["intro_$lang"]}
+                <div class="tecBox tecBox1">
+                    <img src='{$technology["leftpic_$lang"]}'>
+                </div>
+                <div class="tecBox tecBox2">
+                    <h3>{$technology["title1_$lang"]}</h3>
+                    <p>{$technology["content1_$lang"]}</p>
+                </div>
+                <div class="tecBox tecBox3">
+                    
+                    <h3>{$technology["title2_$lang"]}</h3>
+                    <p>{$technology["content2_$lang"]}</p>
+                </div>
+                <div class="tecBox tecBox4">
+                    <h3>{$technology["title3_$lang"]}</h3>
+                    <p>{$technology["content3_$lang"]}</p>
+                    
+                </div>
+                <div class="tecBox tecBox5">
+                    <h3>{$technology["title4_$lang"]}</h3>
+                    <p>{$technology["content4_$lang"]}</p>
+                </div>
+                <div class="tecBox tecBox6">
+                    <img src='{$technology["rightpic_$lang"]}'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(4).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li><a href="{:U('news')}?lang={$lang}">&nbsp;{$title['news center']}</a> > </li>
+                <li>&nbsp;{$title['News details']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div class="newsPer">
+                <div class="newsTitle">
+                    <h2>{$news["title_$lang"]}</h2>
+                    <p><span>{$title["Clicks"]}:{$news["clicks"]}</span><span>{$title["Date"]}：{$news["addtime"]|substr=0,10}</span></p>
+                </div>
+                <div class="newsContent">
+                   {$news["content_$lang"]}
+                </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>技术力量</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post" enctype="multipart/form-data" action="{:U('edit')}">
+                         
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">简介：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="intro_chinese" id="intro_chinese" style="width:100%;height:240px;">{$data.intro_chinese}</script>
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="intro_english" id="intro_english" style="width:100%;height:240px;">{$data.intro_english}</script>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-sm-1 control-label">标题一：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title1_chinese" value="{$data['title1_chinese']}">                            
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title1_english" value="{$data['title1_english']}">                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">内容一：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content1_chinese" id="content1_chinese" style="width:100%;height:240px;">{$data.content1_chinese}</script>
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content1_english" id="content1_english" style="width:100%;height:240px;">{$data.content1_english}</script>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-sm-1 control-label">标题二：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title2_chinese" value="{$data['title2_chinese']}">                            
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title2_english" value="{$data['title2_english']}">                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">内容二：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content2_chinese" id="content2_chinese" style="width:100%;height:240px;">{$data.content2_chinese}</script>
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content2_english" id="content2_english" style="width:100%;height:240px;">{$data.content2_english}</script>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-sm-1 control-label">标题三：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title3_chinese" value="{$data['title3_chinese']}">                            
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title3_english" value="{$data['title3_english']}">                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">内容三：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content3_chinese" id="content3_chinese" style="width:100%;height:240px;">{$data.content3_chinese}</script>
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content3_english" id="content3_english" style="width:100%;height:240px;">{$data.content3_english}</script>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-sm-1 control-label">标题四：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title4_chinese" value="{$data['title4_chinese']}">                            
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="title4_english" value="{$data['title4_english']}">                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">内容四：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content4_chinese" id="content4_chinese" style="width:100%;height:240px;">{$data.content4_chinese}</script>
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <script type="text/plain" name="content4_english" id="content4_english" style="width:100%;height:240px;">{$data.content4_english}</script>
+                            </div>
+                        </div>                                                
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">左侧图片：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                            <input type="file" name="leftpic_chinese">
+                               <img src="{$data['leftpic_chinese']}" alt="" width="270" height="156">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                            <input type="file" name="leftpic_english">
+                               <img src="{$data['leftpic_english']}" alt="" width="270" height="156">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">右侧图片：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input type="file" name="rightpic_chinese">
+                                <img src="{$data['rightpic_chinese']}" alt="" width="270" height="156">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                            <input type="file" name="rightpic_english">
+                               <img src="{$data['rightpic_english']}" alt="" width="270" height="156">
+                            </div>
+                        </div>                                                                        
+
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <input type="hidden" name="uploads" value="0">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+ <script> 
+
+    $(document).on('click','#editor-form',function(e){
+        console.log(e);
+        $("#editor-file").trigger("click");
+        
+    });
+    $("form").submit(function(){
+        if($("input[name='leftpic_chinese']").val()||$("input[name='leftpic_english']").val()||$("input[name='rightpic_chinese']").val()||$("input[name='rightpic_english']").val()){
+            $("input[name='uploads']").attr("value",1);
+        }
+        var title1_english =$("input[name='title1_english']").val();//岗位
+        var title1_chinese =$("input[name='title1_chinese']").val();
+        var title2_english =$("input[name='title2_english']").val();
+        var title2_chinese =$("input[name='title2_chinese']").val();
+        var title3_english =$("input[name='title3_english']").val();
+        var title3_chinese =$("input[name='title3_chinese']").val();
+        var title4_english =$("input[name='title4_english']").val();
+        var title4_chinese =$("input[name='title4_chinese']").val();
+
+        var intro_chinese = UM.getEditor('intro_chinese').getContent();
+        if(!intro_chinese){
+            alert("请填写简介中文");
+        }
+        var intro_english = UM.getEditor('intro_english').getContent();
+        if(!intro_english){
+            alert("请填写简介英文");
+        }        
+        if(!(title1_chinese)){
+            alert("请填写第一部分标题中文");
+            return false;
+        }
+        if(!(title1_english)){
+            alert("请填写第一部分标题英文");
+            return false;
+        }
+        if(!(title2_chinese)){
+            alert("请填写第二部分标题中文");
+            return false;
+        }
+        if(!(title2_english)){
+            alert("请填写第二部分标题英文");
+            return false;
+        }
+        if(!(title3_chinese)){
+            alert("请填写第三部分标题中文");
+            return false;
+        }
+        if(!(title3_english)){
+            alert("请填写第三部分标题英文");
+            return false;
+        }
+        if(!(title4_chinese)){
+            alert("请填写第四部分标题中文");
+            return false;
+        }
+        if(!(title4_english)){
+            alert("请填写第四部分标题英文");
+            return false;
+        }                                                                       
+
+        var content1c = UM.getEditor('content1_chinese').getContent();
+        if(!content1c){
+            alert("请输入第一部分内容中文！");
+            return false;
+        }
+        var content1e = UM.getEditor('content1_english').getContent();
+        if(!content1e){
+            alert("请输入第一部分内容英文！");
+            return false;
+        } 
+
+        var content2c = UM.getEditor('content2_chinese').getContent();
+        if(!content2c){
+            alert("请输入第二部分内容中文！");
+            return false;
+        }
+        var content2e = UM.getEditor('content2_english').getContent();
+        if(!content2e){
+            alert("请输入第二部分内容英文！");
+            return false;
+        }  
+        var content3c = UM.getEditor('content3_chinese').getContent();
+        if(!content3c){
+            alert("请输入第三部分内容中文！");
+            return false;
+        }
+        var content3e = UM.getEditor('content3_english').getContent();
+        if(!content3e){
+            alert("请输入第三部分内容英文！");
+            return false;
+        }  
+        var content4c = UM.getEditor('content4_chinese').getContent();
+        if(!content4c){
+            alert("请输入第四部分内容中文！");
+            return false;
+        }
+        var content4e = UM.getEditor('content4_english').getContent();
+        if(!content4e){
+            alert("请输入第四部分内容英文！");
+            return false;
+        }  
+                                        
+
+    });
+    var um = UM.getEditor('intro_chinese');
+    var um = UM.getEditor('intro_english');    
+    var um = UM.getEditor('content1_chinese');
+    var um = UM.getEditor('content1_english');
+    var um = UM.getEditor('content2_chinese');
+    var um = UM.getEditor('content2_english');
+    var um = UM.getEditor('content3_chinese');
+    var um = UM.getEditor('content3_english');
+    var um = UM.getEditor('content4_chinese');
+    var um = UM.getEditor('content4_english');
+          
+</script>
+</block>
+

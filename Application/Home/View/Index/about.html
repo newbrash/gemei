@@ -1,0 +1,84 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(2).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li>&nbsp;{$title['about us']}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <div class="module">
+        <div class="container">
+            <div id="about">
+                <h1>{$title['Gemei youjia technology co LTD']}<div class="h1Solid"></div></h1>
+                  {$about["intro_$lang"]}
+                <div class="aboutList">
+                    <div class="aboutImg">
+                        <img src='{$about["culture_pic_$lang"]}'>
+                    </div>
+                    <div class="aboutText">
+                        <h3>{$title['enterprise culture']}</h3>
+                        <p>
+                            {$about["culture_$lang"]}
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutList">
+                    <div class="aboutImg">
+                        <img src='{$about["principles_pic_$lang"]}'>
+                    </div>
+                    <div class="aboutText">
+                        <h3>{$title['Our principles']}</h3>
+                        <p>{$about["principles_$lang"]}</p>
+                    </div>
+                </div>
+                <div class="aboutList">
+                    <div class="aboutImg">
+                        <img src='{$about["purpose_pic_$lang"]}'>
+                    </div>
+                    <div class="aboutText">
+                        <h3>{$title['Our purpose']}</h3>
+                        <p>{$about["purpose_$lang"]}</p>
+                    </div>
+                </div>
+                <div class="aboutList">
+                    <div class="aboutImg">
+                        <img src='{$about["ideas_pic_$lang"]}'>
+                    </div>
+                    <div class="aboutText">
+                        <h3>{$title['Our ideas']}</h3>
+                        <p>{$about["ideas_$lang"]}</p>
+                    </div>
+                </div>
+                <div class="aboutList">
+                    <div class="aboutImg">
+                        <img src='{$about["spirits_pic_$lang"]}'>
+                    </div>
+                    <div class="aboutText">
+                        <h3>{$title['Our spirit']}</h3>
+                        <p>{$about["spirits_$lang"]}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+</body>
+</html>

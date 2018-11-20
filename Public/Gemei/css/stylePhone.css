@@ -1,0 +1,164 @@
+body{ 
+    min-width: 0;
+    width: 100%
+}
+.container {
+    min-width: 0!important;
+}
+.navTop{
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+#homeCarousel{
+    margin-top: 60px;
+}
+.navLang{
+    height: 60px;
+    padding: 0
+}
+.navLang img{
+    width: 100px;
+    height: 30px;
+    margin-top: 15px
+}
+.langChange{
+    font-size: 16px;
+    margin-right: 40px;
+}
+.navBtn{
+    display: none
+}
+.navPhone{
+    /* display: block; */
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+}
+.navPhone li{
+    background-color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.navMenu{
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    top: 10px;
+}
+#homeCarousel img{
+    min-height: 150px
+}
+
+.homeProNav{
+    width: 100%;
+    height: 100%;
+}
+.homeProNav li{
+    display: none;
+}
+.homeProNav .homeProActive{
+    display: block
+}
+.homeProContentNav ul{
+    width: 1500px;
+    overflow-x: auto;
+}
+.homeProContentNav li{
+    width: 250px;
+}
+.homeProRight{
+    width: 100%;
+    overflow: hidden;
+}
+.homeProContentNav {
+    overflow-x: scroll;
+}
+
+.homeNews{
+    margin-top: 500px;
+}
+.homeAboutContent p{
+    font-size: 16px;
+}
+
+.homeNewsList p{
+    font-size: 16px;
+}
+
+.footerContact,.wechat{
+    display: none
+}
+.footerNavBox{
+    border-right: none
+}
+.bannerBg {
+    margin-top: 60px;
+    height: 180px;
+}
+
+.mapBox{
+    width: 100%;
+    height: 4rem;
+}
+.mapBox iframe{
+    width: 100%!important;
+    height: 100%!important;
+}
+.contactText p{
+    font-size: 16px;
+}
+.contactWx{
+    position: inherit;
+    display: block;
+    right: 0;
+    width: 80%;
+}
+.recIntro p{
+    font-size: 16px
+}
+.recList li, .recList p{
+    font-size: 16px
+}
+
+#technology>p{
+    font-size: 18px
+}
+.tecBox{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+#about>p{
+    font-size: 18px
+}
+.aboutText,.aboutImg{
+    width: 100%
+}
+
+.newsContent img{
+    width: 90%
+}
+.productLeft{
+    width: 100%;
+    height: 3rem;
+}
+.productRight{
+    width: 100%;
+    margin: 0;
+}
+.productDate{
+    overflow: auto;
+}
+.bread{
+    overflow: hidden;
+}
+.newsTitle span{
+    margin:0;
+}

@@ -1,0 +1,78 @@
+<include file="Common/Gemei/header"/>
+    <script>
+        $('.navContent li').eq(6).addClass('navActive').siblings().removeClass('navActive');
+    </script>
+    <!-- header -->
+    <div class="bannerBg">
+        <img src='{$headpic["picurl_$lang"]}'>
+    </div>
+    <!-- bread -->
+    <div class="bread">
+        <div class="container">
+            <ul>
+                <li>{$title['Current location']}：</li>
+                <li><a href="{:U('index')}?lang={$lang}">{$title['homepage']}</a> > </li>
+                <li><a href="{:U('products')}?lang={$lang}">&nbsp;{$title['product center']}</a> > </li>
+                <li>&nbsp;{$middle["middle_name_$lang"]}</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <!-- bread -->
+    <!-- product -->
+    <div class="module">
+        <div class="container">
+            <div class="product">
+                <div class="productIntro">
+                    <div class="productLeft">
+                        <img src='{$productPer["picurl_$lang"]}'>
+                    </div>
+                    <div class="productRight">
+                        <h2>{$productPer["xinhao_$lang"]}</h2>
+                        <h4>{$title['Product characteristics']}:</h4>
+
+                           {$productPer["intro_$lang"]}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="productDate">
+                    <table>
+                        <tr>
+                            <td>{$title['Model']}</td>
+                            <td>{$title['Size']}</td>
+                            <td>{$title['Weight']}</td>
+                            <td>{$title['Recommended rate of application']}</td>
+                        </tr>
+                        <tr>
+                            <td>{$productPer["xinhao_$lang"]}</td>
+                            <td>{$productPer["chicun_$lang"]}</td>
+                            <td>{$productPer["zhonglian_$lang"]}</td>
+                            <td>{$productPer["jianyi_$lang"]}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="productOthers">
+                    <h2>{$title['Related products']}：</h2>
+                    <div class="proOthersPage">
+                        <foreach name="tuijian" item="vo" key='k'>
+                        <if condition="$k lt 3">
+                        <div class="proOthersBox">
+                            <a href="{:U('productPer')}?lang={$lang}&id={$vo.id}"><img src='{$vo["picurl_$lang"]}'></a>
+                        </div>
+                       </if>
+                        </foreach>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product -->
+    <!-- footer -->
+    <include file="Common/Gemei/footer"/>
+
+    <!-- footer -->
+    <script src="__PUBLIC__/Gemei/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/swiper-4.2.6.min.js"></script>
+    <script src="__PUBLIC__/Gemei/js/index.js"></script>
+</body>
+</html>

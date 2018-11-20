@@ -1,0 +1,212 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="col-lg-14">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>关于我们</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t " method="post"  enctype="multipart/form-data" action="{:U('edit')}">
+ 
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">简介：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_chinese" id="myEditor_chinese" style="width:100%;height:240px;">{$data.intro_chinese}</script>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-8">
+                                <script type="text/plain" name="intro_english" id="myEditor_english" style="width:100%;height:240px;">{$data.intro_english}</script>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">企业文化：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="culture_chinese" class="form-control" name="culture_chinese" value="{$data.culture_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="culture_english" class="form-control" name="culture_english" value="{$data.culture_english}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的原则：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="principles_chinese" class="form-control" name="principles_chinese" value="{$data.principles_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="principles_english" class="form-control" name="principles_english" value="{$data.principles_english}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的宗旨：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="purpose_chinese" class="form-control" name="purpose_chinese" value="{$data.purpose_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="purpose_english" class="form-control" name="purpose_english" value="{$data.purpose_english}">
+                            </div>
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的理念：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="ideas_chinese" class="form-control" name="ideas_chinese" value="{$data.ideas_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="ideas_english" class="form-control" name="ideas_english" value='{$data.ideas_english}'>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的精神：</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="spirits_chinese" class="form-control" name="spirits_chinese" value="{$data.spirits_chinese}">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="text" id="spirits_english" class="form-control" name="spirits_english" value="{$data.spirits_english}">
+                            </div>
+                        </div>                        
+
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">企业文化图片</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="culture_pic_chinese"  name="culture_pic_chinese" value="{$data.culture_pic_chinese}">
+                                <img src="{$data.culture_pic_chinese}" alt="" width="270px" height="168px">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="culture_pic_english"  name="culture_pic_english" value="{$data.culture_pic_english}">
+                                <img src="{$data.culture_pic_english}" alt="" width="270px" height="168px">
+                            </div>                            
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的原则图片</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="principles_pic_chinese"  name="principles_pic_chinese" value="{$data.principles_pic_chinese}">
+                                <img src="{$data.principles_pic_chinese}" alt="" width="270px" height="168px">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="principles_pic_english"  name="principles_pic_english" value="{$data.principles_pic_english}">
+                                <img src="{$data.principles_pic_english}" alt="" width="270px" height="168px">
+                            </div>                            
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的宗旨图片</label> 
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="purpose_pic_chinese"  name="purpose_pic_chinese" value="{$data.purpose_pic_chinese}">
+                                <img src="{$data.purpose_pic_chinese}" alt="" width="270px" height="168px">
+                            </div>
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="purpose_pic_english"  name="purpose_pic_english" value="{$data.purpose_pic_english}">
+                                <img src="{$data.purpose_pic_english}" alt="" width="270px" height="168px">
+                            </div>                            
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的理念图片</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="ideas_pic_chinese"  name="ideas_pic_chinese" value="{$data.ideas_pic_chinese}">
+                                <img src="{$data.ideas_pic_chinese}" alt="" width="270px" height="168px">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="ideas_pic_english"  name="ideas_pic_english" value="{$data.ideas_pic_english}">
+                                <img src="{$data.ideas_pic_english}" alt="" width="270px" height="168px">
+                            </div>                            
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">我们的精神图片</label> 
+                            <label class="col-sm-2 control-label">中文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="spirits_pic_chinese" class="form-control" name="spirits_pic_chinese" value="{$data.spirits_pic_chinese}">
+                                <img src="{$data.spirits_pic_chinese}" alt="" width="270px" height="168px">
+                            </div>
+                            <label class="col-sm-2 control-label">英文：</label>
+                            <div class="col-sm-3">
+                                <input  type="file" id="spirits_pic_english"  name="spirits_pic_english" value="{$data.spirits_pic_english}">
+                                <img src="{$data.spirits_pic_english}" alt="" width="270px" height="168px">
+                            </div>                            
+                        </div>                        
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <input type="hidden" name="uploads" value="0">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>                                                 
+                        <!-- 翻译插件 -->
+                        <div class="form-group">
+                          <iframe class="form-control" src="https://www.woaifanyi.com/" id="online_translation" name="online_translation" frameborder="1" style="height: 500px;"></iframe>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!--尾部-->
+      <include file="Common/admin:footer"/>
+  </div>
+
+ <script> 
+    $("form").submit(function(){
+        var contentc = UM.getEditor('myEditor_chinese').getContent();
+        if(!contentc){
+            alert("请输入中文简介！");
+            return false;
+        }
+        var contente = UM.getEditor('myEditor_english').getContent();
+        if(!contente){
+            alert("请输入英文简介！");
+            return false;
+        }        
+        var culture_english =$("input[name='culture_english']").val();
+        var culture_chinese =$("input[name='culture_chinese']").val();
+        var principles_english =$("input[name='principles_english']").val();
+        var principles_chinese =$("input[name='principles_chinese']").val();
+        var purpose_english =$("input[name='purpose_english']").val();
+        var purpose_chinese =$("input[name='purpose_chinese']").val();
+        var ideas_english =$("input[name='ideas_english']").val();
+        var ideas_chinese =$("input[name='ideas_chinese']").val();
+        var spirits_english =$("input[name='spirits_english']").val();
+        var spirits_chinese =$("input[name='spirits_chinese']").val();
+        if(!(culture_chinese&&culture_english&&principles_chinese&&principles_english&&purpose_chinese&&purpose_english&&ideas_chinese&&ideas_english&&spirits_chinese&&spirits_english)){
+            alert(intro_english);
+            return false;
+        }                                        
+        if($("input[name='culture_pic_english']").val()||$("input[name='culture_pic_chinese']").val()||$("input[name='principles_pic_english']").val()||$("input[name='principles_pic_chinese']").val()||$("input[name='purpose_pic_english']").val()||$("input[name='purpose_pic_chinese']").val()||$("input[name='ideas_pic_english']").val()||$("input[name='ideas_pic_chinese']").val()||$("input[name='spirits_pic_english']").val()||$("input[name='spirits_pic_chinese']").val()){
+            $("input[name='uploads']").attr("value",1);   
+            // 允许单张修改图片
+        }
+    });
+    var um = UM.getEditor('myEditor_chinese');
+    var um = UM.getEditor('myEditor_english');
+</script>
+</block>
+

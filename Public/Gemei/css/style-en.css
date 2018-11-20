@@ -1,0 +1,67 @@
+
+.homeAboutContent span {
+	background: transparent!important;
+	color: #fff!important;
+}
+
+.footerNavBox p a {
+	color: #333333;
+	text-decoration: underline;
+	display: inline-block;
+	width: 1.5rem;
+}
+
+.footerNavBox p a:last-child {
+	padding-left: 1em;
+}
+.tecBox p span {
+	background: transparent!important;
+}
+
+.tecBox2,.tecBox3{
+	padding: 0.2rem 0.5rem;
+}
+
+.tecBox5{
+	padding: 0.3rem;
+}
+
+.tecBox p{
+	padding-top: 0
+}
+
+.homeProNav li p{
+	font-size: 0.18rem;
+}
+
+.homeProNav li p img{
+	display: none;
+}
+.homeProContentNav li p{font-size: 15px !important;}
+.aboutText p{font-size:0.16rem !important;}
+
+.aboutText{
+	padding:0.2rem 0.6rem;
+}
+
+@media screen and (max-width: 600px) {
+	.footerNavBox p a{
+		width: 50%;
+	}
+	.footerCopyright{
+		height: 90px;
+		padding: 5px 0;
+	}
+	.footerNavBox p{
+		font-size: 16px;
+	}
+	.aboutText{
+		padding: 10px!important;
+	}
+	.tecBox p{
+		font-size:0.13rem !important;
+	}
+	.bread li{
+		font-size:0.13rem ;
+	}
+}

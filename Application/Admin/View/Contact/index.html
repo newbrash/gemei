@@ -1,0 +1,51 @@
+<extend name="Common/common" />
+<block name="main">
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-14">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>联系我们</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <!--表格开始    -->
+
+                                <div class="table-responsive">
+                                    <table class="table  table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>联系人1</th>
+                                            <th>联系人1手机号码</th>
+                                            <th>联系人2</th>
+                                            <th>联系人2手机号码</th>
+                                            <th style="width: 100px">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <foreach name="datalists" item="vo">
+                                            <tr>
+                                                <td> {$vo.id}</td>
+                                                <td> {$vo.name1_chinese}</td>
+                                                <td> {$vo.telephone1} </td>
+                                                <td> {$vo.name2_chinese}</td>
+                                                <td> {$vo.telephone2}</td>
+                                                <td>
+                                                    <a href="{:U('edit',array('id'=>$vo['id']))}">编辑</a>
+                                                </td>
+                                            </tr>
+                                        </foreach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--尾部-->
+        <include file="Common/admin:footer"/>
+    </div>
+</block>
+

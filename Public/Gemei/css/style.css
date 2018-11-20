@@ -1,0 +1,265 @@
+/* nav */
+.navTop{ height: 120px; background-color: #10A8FE; }
+.navLang{ height: 120px; padding: 30px 0}
+.navLang img{ height: 60px; width: 210px; float: left;}
+.langChange{ float: right; height: 60px; line-height: 60px; font-size: 20px; color: #99daff}
+.langChange a{ color: #99daff; padding: 0 10px;}
+.langActive{ color: #ffffff!important; text-decoration: none!important; cursor: default}
+
+.navContent{ height: 60px; padding: 2px 0}
+.navContent li{ float: left; height: 56px; width: 14%; line-height: 56px; text-align: center; margin-left: 0.285%;}
+.navContent li a{ font-size: 0.22rem; color: #10a8fe; font-weight: 500; text-decoration: none}
+.navActive{ border-bottom: #FDD047 4px solid; }
+.navActive a{ color: #FDD047!important}
+.navContent li:not(.navActive):hover{ border-bottom: #333333 4px solid}
+
+
+
+
+/* bread */
+.bread{ height: 0.6rem; background-color: #e5e5e5}
+.bread li{ float: left; height: 0.6rem; line-height: 0.6rem; font-size: 0.16rem}
+.bread li a{ color: #333333}
+
+.bannerBg{ height: 3.5rem;}
+.bannerBg img{ width: 100%; height: 100%;}
+
+/* homeCarousel */
+#homeCarousel{ width: 100%}
+#homeCarousel img{ width: 100%}
+
+
+/* homeProducts */
+
+.homeProTitle{ border-left: #47EAFD 10px solid}
+.homeProTitle h2{ text-indent: 1em}
+.homeProNav{ height: 4.7rem; width: 20%; overflow-y: auto; margin-top: 20px; float: left; background: url(../images/pronav.png) no-repeat; background-size: 100% 100%}
+.homeProNav li{ width: 100%; height: 0.6rem; border-bottom: #ffffff 1px solid; overflow: hidden;}
+.homeProNav li p{ text-indent: 2em; color: #ffffff; font-size: 0.22rem; height: 0.6rem; line-height: 0.6rem}
+.homeProNav li p:hover{ color: #10A8FE; cursor: pointer;}
+.homeProNav li p img{ padding: 0 20px 3px 0}
+.homeProActive p{ color: #FDD047!important}
+
+
+.homeProRight{ width: 80%; float: left;}
+.homeProContentNav{ width: 100%; height: 50px; border-bottom: #086AF1 2px solid; margin: 30px 0 10px;}
+.homeProContentNav li{ float: left; width: 18%; margin-left: 2%; text-align: center;}
+.homeProContentNav li p{ font-size: 20px; display: inline-block; height: 50px; cursor: pointer;}
+.homeProChecked{ background: url(../images/pointpro.png) no-repeat; background-size: 100% auto; background-position: bottom; color: #086af1}
+.homProBox{ margin-top: 30px; height: 170px; overflow: hidden;}
+.homProBox img{ width: 100%; height: 100%; vertical-align: middle; transition: all 1s}
+.homProBox :hover img{ transform: scale(1.5)}
+
+
+/* products */
+.productsBox{ height: 215px; position: relative;}
+.productsName{ width: 100%; height: 100%; line-height: 215px; color: #ffffff; background-color: rgba(0, 0, 0, 0.5); position: absolute;  top: 0; left: 0; text-align: center; font-size: 0.28rem; display: none}
+
+
+/* productPer */
+.productLeft{ float: left;width: 44%; height: 4.5rem;}
+.productLeft img{ width: 100%; height: 100%;}
+.productRight{ float: left; margin-left: 4%; width: 52%}
+.productRight h2{ color: #10a8fe; text-align: center}
+.productRight h4{ font-weight: 600; font-size: 0.2rem}
+.productRight li{ font-size: 0.2rem; padding-left: 2em; margin-top: 0.15rem; line-height: 0.4rem;
+background: url(../images/pointyl.png ) no-repeat; background-size: 15px 15px; background-position: 10px 12px
+}
+
+.productDate{ width: 100%}
+
+.productDate table{ width: 100%; text-align: center; border-collapse: collapse; margin-top: 20px;}
+.productDate table,.productDate td{ border: #666666 1px solid;}
+.productDate td{ padding: 20px}
+
+.productOthers{ margin: 0.4rem 0;}
+.productOthers h2{ font-weight: 600; line-height: 80px; font-size: 24px}
+.proOthersBox{ width: 28%; float: left; margin-left: 2%;}
+.proOthersBox:first-child{ margin-left: 5%;}
+.proOthersBox img{ width: 100%; height: 2.5rem;}
+
+
+/* home About News */
+.homeAboutTitle{ border-left: #FD5D47 10px solid; margin-bottom: 30px;}
+.homeAboutTitle h2{ text-indent: 1em}
+.homeNewsTitle{ border-left: #FDD047 10px solid; margin-bottom: 30px;}
+.homeNewsTitle h2{ text-indent: 1em}
+
+.homeAboutBg{ position: relative;}
+.homeAboutBorder{ height: 420px; width: 96% ;position: absolute; border: #7D9AB3 10px solid; left: 0; top: 0}
+.homeAboutContent{ background: url(../images/homeaboutbg.png) no-repeat; background-size: 100% 100%; height: 400px; padding: 40px 30px 0 30px; position: absolute; left: 30px; top: 30px;box-shadow: 0px 0px 10px 1px #000;}
+.homeAboutContent p{ font-size: 20px; color: #ffffff; line-height: 40px;  overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 7;
+-webkit-box-orient: vertical;}
+.homeAboutContent a{ position: absolute; right: 20px; bottom: 20px; font-size: 20px; color: #FDD047}
+
+.homeNewsList{ padding: 0 0 30px 0.5rem; background: url(../images/handwt.png) no-repeat; background-size: 0.26rem 0.2rem; background-position: 0 0.05rem}
+.homeNewsList p{ font-size: 0.2rem; color: #999999; line-height: 30px; overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;}
+.homeNewsList a{ text-decoration: none}
+.homeNewsList:hover{ background: url(../images/handbl.png) no-repeat; background-size: 0.26rem 0.2rem; background-position: 0 0.05rem}
+.homeNewsList:hover p{ color: #138ff7}
+
+
+
+.footerNav{ background-color: #E0E0E0; height: 320px; padding: 70px 0}
+.footerNavBox{ border-right: #9f9f9f 2px solid}
+.footerNavBox p{ font-size: 0.2rem; line-height: 60px}
+.footerNavBox p a{ color: #333333; text-decoration: underline}
+.footerNavBox p a:last-child{ padding-left: 4em}
+.footerNavBox p a:hover{ color: #10a8fe}
+
+.footerContact{ padding-left: 0.7rem; border-right: #9f9f9f 2px solid}
+.footerContact p{ font-size: 0.2rem; line-height: 45px}
+
+.wechat{ float: right;width: 70%; margin-top: -0.1rem;}
+.wechat img{ width: 100%}
+.wechat p{ text-align: center; font-size: 0.22rem; line-height: 0.4rem}
+
+.footerCopyright{ background-color: #333333; height: 70px; padding: 15px 0}
+.footerCopyright p{ color: #ffffff; font-size: 0.16rem; text-align: center}
+
+
+
+
+/* contact */
+.contactTitle{ position: relative; font-size: 0.28rem; overflow: hidden;}
+.contactTitle h3{  font-weight: 600}
+.contactDashed{ border-bottom: #333333 1px dashed; left: 4em;position: absolute; width: 100%; top: 50%}
+.contactText{ position: relative;}
+.contactWx{ width: 18%; position: absolute; right: 2rem; top: 0}
+.contactWx p{ font-size: 0.2rem; text-align: center; line-height: 0.3rem;}
+.contactWx img{ width: 100%}
+.contactText{ margin-top: 0.2rem; padding-left: 0.5rem;}
+.contactText p{ font-size: 0.24rem; line-height: 60px}
+
+.mapBox{ text-align: center; padding-top: 0.5rem;}
+.mapBox iframe{ border: #999999 2px solid}
+
+
+
+/* about */
+#about{ text-align: center}
+#about h1{ line-height: 0.8rem;  position: relative;}
+.h1Solid{ width: 6%; border-bottom: #999999 2px solid;position: absolute; left: 47%;}
+#about>p{ color: #999999; font-size: 0.24rem; padding-top: 0.3rem; line-height: 0.4rem;}
+.aboutText{ height: 4rem; width: 50%; background-color: #e0e0e0; padding: 0.8rem 1rem; float: left;}
+.aboutText h3{ text-align: left; line-height: 0.6rem;font-size: 0.33rem;}
+.aboutText p{ font-size: 0.18rem; text-indent: 2em; line-height: 0.4rem; text-align: left}
+.aboutImg{ width: 50%; height: 4rem; float: left;}
+.aboutImg img{ width: 100%; height: 100%;}
+.aboutList:nth-of-type(1){ margin-top: 0.4rem;}
+.aboutList:nth-of-type(1) h3{ color: #10a8fe}
+.aboutList:nth-of-type(2) h3{ color: #fd5d47}
+.aboutList:nth-of-type(3) h3{ color: #fdd047}
+.aboutList:nth-of-type(4) h3{ color: #009688}
+.aboutList:nth-of-type(5) h3{ color: #006afe}
+.aboutList:nth-child(odd) .aboutImg{
+    float: right;
+}
+
+
+
+/* technology */
+#technology>p{ font-size: 0.24rem; line-height: 0.4rem}
+#technology img{ width: 100%; height: 100%;}
+.tecBox{ float: left; background-color: #e0e0e0}
+.tecBox p{ font-size: 0.16rem!important; text-indent: 2em; line-height: 0.3rem; padding-top: 0.2rem;}
+.tecBox1{ width: 53%; height: 5.2rem; margin-top: 0.5rem;}
+.tecBox2{ width: 45.3%; height: 2.5rem; margin: 0.5rem 0 0 1.7%; padding: 0.5rem}
+.tecBox2 h3{ color: #10a8fe}
+.tecBox3{ width: 45.3%; height: 2.5rem; margin: 0.2rem 0 0 1.7%; padding: 0.5rem}
+.tecBox3 h3{ color: #009688}
+.tecBox4{ width: 45.3%; height: 4.6rem;margin-top: 0.2rem;  padding: 1rem 0.5rem}
+.tecBox4 h3{ color: #fd5d47}
+.tecBox5{ width: 53%; height: 2.2rem; margin: 0.2rem 0 0 1.7%; padding: 0.3rem 1rem}
+.tecBox5 h3{ color: #10a8fe}
+.tecBox6{ width: 53%; height: 2.2rem; margin: 0.2rem 0 0 1.7%;}
+
+
+
+
+/* news */
+.companyNews{cursor: pointer; height: 3.7rem; background: url(../images/newbg/factory-1.jpg) no-repeat; background-size: 100% 100%}
+.hyNews{cursor: pointer; height: 3.7rem; background: url(../images/newbg/factory-2.jpg) no-repeat; background-size: 100% 100%}
+.newsTip{ width: 100%; height: 100%; text-align: center;  background-color: rgba(0, 0, 0, 0.5)}
+.newsTip span{ color: #ffffff; margin-top: 4em; display: inline-block; font-size: 0.4rem;}
+.companyNews .newsTip span{ color: #ffffff; margin-top: 4em; display: inline-block; font-size: 0.4rem;}
+.companyNews:hover .newsTip span{ color: #10a8fe;}
+.hyNews .newsTip span{ color: #fdd047; margin-top: 4em; display: inline-block; font-size: 0.4rem;}
+.hyNews:hover .newsTip span{ color: #10a8fe;}
+
+.newsBox{ height: 4rem; margin-top: 20px; border: #999999 1px solid}
+.newsBox a{  text-decoration: none}
+.newsPic{ height: 3rem;}
+.newsPic img{ height: 3rem; width: 100%;}
+.newsText{ height: 1rem; padding: 0.1rem ;}
+.newsText h3{ color: #333333; font-size: 0.2rem; overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;}
+.newsText p{ padding-top: 5px; color: #999999; font-size: 0.14rem; overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;}
+
+.newsBox:hover h3{ color: #10A8FE; text-decoration: underline}
+
+.newsBtn{ background-color: #10A8FE; width: 2.3rem; height: 0.6rem; color: #ffffff; line-height: 0.6rem; text-align: center; font-size: 0.2rem; margin: 60px auto 0}
+
+
+/* newsPer */
+.newsTitle{ text-align: center}
+.newsTitle h2{ line-height: 0.6rem;}
+.newsTitle span{ margin: 0 0.5rem; font-size: 12px; color: #999999; line-height: 0.4rem}
+.newsContent p{ font-size: 0.16rem; line-height: 0.3rem; text-indent: 2em;}
+
+
+.newsContent span{ width: 100% ; white-space: normal!important;} 
+
+
+/* recruit */
+.recIntro{ border-bottom: #999999 1px solid}
+.recIntro h3{ font-weight: 600; margin-bottom: 0.2rem;}
+.recIntro li{ font-size: 0.2rem; line-height: 0.4rem; text-indent: 2em}
+
+.recList{ padding: 0.3rem; border-bottom: #999999 1px solid}
+.recList h3{ color: #10a8fe; line-height: 0.6rem; font-weight: 600}
+.recIntro p {font-size: 0.18rem;line-height: 0.33rem;text-indent: 2em;}
+/*.recList li,.recList p{ font-size: 0.2rem; line-height: 0.4rem; line-height: 0.5rem;}*/
+.recList li,.recList p{ font-size: 0.18rem; line-height: 0.33rem; line-height: 0.35rem;}
+.recList span{ font-weight: 600}
+
+.recContact{ padding: 0.3rem;}
+.recContact h3{ color: #10a8fe; line-height: 0.6rem; font-weight: 600}
+.recContact p{  font-size: 0.2rem; line-height: 0.4rem; line-height: 0.5rem;}
+.recContact span{ color: #fd5d47}
+
+
+
+/*.recIntro p {
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+    text-indent: 2em;
+}*/
+
+.productRight p {
+    font-size: 0.2rem;
+    padding-left: 2em;
+    margin-top: 0.15rem;
+    line-height: 0.4rem;
+    background-size: 15px 15px;
+    background-position: 10px 12px;
+}
+
+
+.navPhone,.navMenu{
+    display: none
+}
